@@ -9,4 +9,4 @@
 *.zip
 
 # Too large for GitHub (319 MB) – a compressed copy (cleaned_housing_data.csv.xz) is committed instead
-Submission_Roda_Ladaa_Patel_Arshad/Code/data/cleaned_housing_data.csv
+/submission/Code/data/cleaned_housing_data.csv

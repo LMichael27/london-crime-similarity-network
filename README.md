@@ -4,7 +4,7 @@ Final project for **Simulation and Modeling** at Bocconi University.
 
 **Authors:** Matteo Roda, Michael Ladaa, Muhammad Bin Arshad, Yash Patel
 
-📄 **[Read the full report (PDF)](Submission_Roda_Ladaa_Patel_Arshad/Report/Report_Ladaa_Roda_Patel_Arshad.pdf)**
+📄 **[Read the full report (PDF)](submission/Report/Modelling_Crime_Rates_Report.pdf)**
 
 ---
 
@@ -34,13 +34,13 @@ minority employment come out as the strongest predictor of how crime changes bet
 ## Repository structure
 
 ```
-Submission_Roda_Ladaa_Patel_Arshad/
+submission/
 ├── Report/
-│   └── Report_Ladaa_Roda_Patel_Arshad.pdf     # final paper
+│   └── Modelling_Crime_Rates_Report.pdf       # final paper
 └── Code/
     ├── datacleaning1.ipynb                    # merge housing/crime data with borough shapes, EDA
     ├── datacleaning2.ipynb                    # clean labour-market data (inactivity, employment by ethnicity)
-    ├── final_ladaa_arshad_roda_patel.ipynb    # network construction, SI model, calibration, results
+    ├── final_model.ipynb                      # network construction, SI model, calibration, results
     └── data/
         ├── cleaned_housing_data.csv.xz        # compressed (see below)
         ├── housing_in_london_{monthly,yearly}_variables.csv
@@ -55,13 +55,13 @@ Submission_Roda_Ladaa_Patel_Arshad/
 
 ```bash
 git clone https://github.com/LMichael27/london-crime-similarity-network.git
-cd london-crime-similarity-network/Submission_Roda_Ladaa_Patel_Arshad/Code
+cd london-crime-similarity-network/submission/Code
 
 # The cleaned dataset is 319 MB uncompressed, which is over GitHub's file size limit
 xz -dk data/cleaned_housing_data.csv.xz
 
 pip install pandas numpy scipy matplotlib seaborn geopandas networkx xlrd jupyter
-jupyter notebook final_ladaa_arshad_roda_patel.ipynb
+jupyter notebook final_model.ipynb
 ```
 
 > The final notebook runs `from utils import *`, and `utils.py` is in `data/`. Before running it, copy the
